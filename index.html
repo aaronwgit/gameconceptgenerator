@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:portrait)"/>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:landscape)"/>
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title> The Game Concept Generator </title>
+</head>
+
+ <body style="background-color:LightBlue;">
+    <!-- HTML5 article tag for content -->
+    <div id="content">
+	<h1>The Game Concept Generator</h1>
+
+ 
+ <script>
+ var genreArr=new Array("RPG","Action","Sandbox","Puzzle","Simulator","Roguelike","Platformer","Strategy");
+ var mechanicArr=new Array("EXP","Shooting","Randomly Generated Worlds","Character Customization","Crafting","Physics Engine","Hunger Meter","Slowmotion");
+	function randomizeGenre(a) {
+		var randomNum = Math.floor(Math.random() * a.length);
+		var randgenre = a[randomNum];
+		document.getElementById("genre").value = a[randomNum];
+	}
+	
+	function randomizeMechanic(a) {
+		var randomNum = Math.floor(Math.random() * a.length);
+		var randgenre = a[randomNum];
+		document.getElementById("mechanic1").value = a[randomNum];
+	}
+	
+	function randomizeMechanic2(a) {
+		var randomNum = Math.floor(Math.random() * a.length);
+		var randgenre = a[randomNum];
+		document.getElementById("mechanic2").value = a[randomNum];
+	}
+	
+	
+	</script>
+	
+	
+
+    <button id="changeButton" onclick=randomizeGenre(genreArr);>Random Genre</button>
+	<br>
+	<button id="changeButton" onclick=randomizeMechanic(mechanicArr);>Random Mechanic 1</button>
+	<br>
+	<button id="changeButton" onclick=randomizeMechanic2(mechanicArr);>Random Mechanic 2</button>
+
+   <!-- Navigation buttons -->
+   <nav id="main_nav">
+
+   <form action="finish.html" method = "get" target = "_blank">
+   
+	<h1>Pick a genre.<br></h1>
+   <select name="genre" id="genre">
+    <option value="RPG">RPG</option>
+    <option value="Action">Action</option>
+    <option value="Sandbox">Sandbox</option>
+    <option value="Puzzle">Puzzle</option>
+	<option value="Simulator">Simulator</option>
+	<option value="Roguelike">Roguelike</option>
+	<option value="Platformer">Platformer</option>
+	<option value="Strategy">Strategy</option>
+  </select>
+ 
+  <br>
+   <h1>Pick two mechanics. <br></h1>
+   
+   <select name="mechanic1" id="mechanic1">
+    <option value="EXP">EXP</option>
+    <option value="Shooting">Shooting</option>
+    <option value="Randomly Generated Worlds">Randomly Generated Worlds</option>
+    <option value="Character Customization">Character Customization</option>
+	<option value="Crafting">Crafting</option>
+	<option value="Physics Engine">Physics Engine</option>
+	<option value="Hunger Meter">Hunger Meter</option>
+	<option value="Slowmotion">Slowmotion</option>
+  </select>
+  <br><br>
+    <select name="mechanic2" id="mechanic2">
+    <option value="EXP">EXP</option>
+    <option value="Shooting">Shooting</option>
+    <option value="Randomly Generated Worlds">Randomly Generated Worlds</option>
+    <option value="Character Customization">Character Customization</option>
+	<option value="Crafting">Crafting</option>
+	<option value="Physics Engine">Physics Engine</option>
+	<option value="Hunger Meter">Hunger Meter</option>
+	<option value="Slowmotion">Slowmotion</option>
+  </select>
+   <br>
+      <h1>Pick two keywords. <br>
+   (These will be used in the game’s title)<br></h1>
+   
+  <label for="keyword1">Enter keyword here:</label>
+  <input type="text" id="keyword1" name="keyword1"><br><br>
+  <label for="keyword2">Enter keyword here:</label>
+  <input type="text" id="keyword2" name="keyword2"><br><br>
+  
+  <input type="submit" value="Next">
+</form>
+  <br><br>
+
+   </nav>
+</p>
+
+    </div>
+</body>
+</html>
